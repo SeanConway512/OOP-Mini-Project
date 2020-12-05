@@ -9,12 +9,17 @@ public class Driver extends JFrame {
     public static void main(String[] args) {
 
       JFrame frame = new JFrame("HelpDesk");
+      JPanel panel = new JPanel();
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       frame.setSize(600,600);
       JButton button = new JButton("Press");
+      button.setSize(new Dimension(40, 40));
+      frame.add(button);
       frame.getContentPane().add(button);
       frame.setVisible(true);
       frame.setLocationRelativeTo(null);
+      panel.setLayout(new FlowLayout());
+      panel.setSize(750,750);
 
       JMenuBar mb = new JMenuBar();
       JMenu menu1 = new JMenu("FILE");
@@ -26,7 +31,7 @@ public class Driver extends JFrame {
       menu1.add(m11);
       menu1.add(m22);
 
-      JPanel panel = new JPanel();
+
       JLabel label = new JLabel("Enter Text");
       JTextField tf = new JTextField(10);
       JButton send = new JButton("Send");

@@ -28,4 +28,13 @@ public class Employee {
     public int getID() {
         return ID;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "Name='" + Name + '\'' +
+                ", ID=" + ID +
+                ", address=" + address +
+                '}';
+    }
 }
